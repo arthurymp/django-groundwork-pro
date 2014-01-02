@@ -100,7 +100,10 @@ class Command(BaseCommand):
 
             # settings
             f = open(os.path.join(PROJECT_ROOT, PROJECT_NAME, 'settings.py'), 'a')
-            f.write( "\nimport os\nTEMPLATE_DIRS += (os.path.join(  os.path.dirname(__file__), '../templates') ,)\n")
+            if 'TEMPLATE_DIRS' in open(os.path.join(PROJECT_ROOT, PROJECT_NAME, 'settings.py'), 'r').read():
+                f.write( "\nTEMPLATE_DIRS += (os.path.join(  os.path.dirname(__file__), '../templates') ,)\n")
+            else:
+                f.write( "\nTEMPLATE_DIRS = (os.path.join(  os.path.dirname(__file__), '../templates') ,)\n")
             f.close()
                 
         except:
