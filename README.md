@@ -1,5 +1,7 @@
 ##Discribe##
 This app is forked from [madhusudancs](https://github.com/madhusudancs/django-groundwork/) .I fix the bugs to make it working with the Django1.6 and keep maintaining it.So if you find any bugs while useing it please contact me <moupeng.yang@gmail.com>.
+
+##Release##
 You can get the last release version in [Release](https://github.com/arthurymp/django-groundwork-pro/releases).For the version here is adjust the django verion.
 
 ##Usage##
